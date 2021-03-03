@@ -1,8 +1,45 @@
-# RPLAN-ToolBox
+# Small Modifications on RPLAN-ToolBox
+
+```Batch_plot.py``` --> convert the whole ```./data``` folder into the ```./output``` folder
+
+From Black-outline to >> Vectorized Floorplan
+
+![0](https://user-images.githubusercontent.com/62864640/109806415-71beae00-7c03-11eb-92ea-67160dc3b113.png)
+![0 (4)](https://user-images.githubusercontent.com/62864640/109806514-90bd4000-7c03-11eb-8353-06576a0d227a.png)
+
+
+1) Notes on Batch Processing
+
+Uncomment last lines of the ```Batch_plot.py``` to choose the output type
+Standard code: (just leave one #coment)
+
+```
+    plot_category(fp.category) # raw image
+    #plot_boundary(data['boundary']) # vector boundary
+    #plot_graph(data['boundary'],data['boxes'],data['types'],data['edges']) # node graph
+    #plot_fp(data['boundary'], data['boxes_aligned'][order], data['types'][order]) # vector floorplan
+    #plot_fp(data['boundary'], data['boxes_aligned'][order], data['types'][order],data['doors'],data['windows']) # vector floorplan with doors and windows
+```
+
+2) For different output colors, edit ```./rplan/decorate.py``` and ```./rplan/plot.py``` with the desired RGB color values according to the room labels
+
+Examples of different output colors with #raw image :
+
+
+![0 (3)](https://user-images.githubusercontent.com/62864640/109806559-987ce480-7c03-11eb-8f42-bf85a549542c.png)
+![0 (6)](https://user-images.githubusercontent.com/62864640/109806760-d7ab3580-7c03-11eb-944d-6403e9ea9f2c.png)
+
+![0 (5)](https://user-images.githubusercontent.com/62864640/109806781-dd088000-7c03-11eb-8b30-d40174e75e2c.png)
+![0 (2)](https://user-images.githubusercontent.com/62864640/109806789-e0037080-7c03-11eb-8855-057f21a5e932.png)
+
+
+
+# RPLAN-ToolBox - Original explanation from [source code](https://github.com/zzilch/RPLAN-Toolbox)
 A tool box for RPLAN dataset.
 
 ![](./output/plot.png)
 ![](./output/tf.png)
+
 # Usage
 
 0. Install dependency
